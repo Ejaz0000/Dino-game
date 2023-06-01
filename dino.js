@@ -36,6 +36,11 @@ export function updateDino(delta,speedScale){
 
 }
 
+export function setDinoLose() {
+  dinoElem.src = "imgs/dino-lose.png"
+}
+
+
 function handleJump(delta){
 
     if (!isJumping) return
@@ -75,4 +80,8 @@ function handleRun(delta,speedScale){
 
 
    currentFrameTime += delta * speedScale
+}
+
+export function getDinoRect() {
+  return dinoElem.getBoundingClientRect()
 }
